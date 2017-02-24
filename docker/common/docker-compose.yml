@@ -85,7 +85,7 @@ services:
   zipkin:
     image: openzipkin/zipkin
     ports:
-      - "9411:9411"
+      - 9411:9411
   logspout:
     image: gliderlabs/logspout
     command: syslog://logs5.papertrailapp.com:51601

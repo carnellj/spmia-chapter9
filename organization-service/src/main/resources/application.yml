@@ -4,10 +4,12 @@ spring:
   profiles:
     active:
       default
-  spring:
-      sleuth:
-        sampler:
-           percentage:  1
+  #spring:
+#      sleuth:
+#        sampler:
+#           percentage:  1
+  zipkin:
+    baseUrl:  localhost:9411
   cloud:
     config:
       enabled: true

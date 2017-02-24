@@ -4,10 +4,11 @@ spring:
   profiles:
     active:
       default
-  spring:
-    sleuth:
-      sampler:
-         percentage:  1
+#    sleuth:
+#      sampler:
+#         percentage:  1
+  zipkin:
+    baseUrl:  localhost:9411
   cloud:
     config:
       enabled: true
@@ -20,6 +21,7 @@ spring:
         binder:
           zkNodes: localhost
           brokers: localhost
+
 
 #        input:
 #          destination: orgChangeTopic
