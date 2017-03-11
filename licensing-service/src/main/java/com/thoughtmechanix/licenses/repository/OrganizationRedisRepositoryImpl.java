@@ -2,6 +2,7 @@ package com.thoughtmechanix.licenses.repository;
 
 import com.thoughtmechanix.licenses.model.Organization;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.sleuth.SpanName;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;

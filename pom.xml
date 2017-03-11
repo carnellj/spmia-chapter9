@@ -22,6 +22,7 @@
     <module>organization-service</module>
     <module>eurekasvr</module>
     <module>zuulsvr</module>
+    <module>zipkinsvr</module>
   </modules>
   <build>
     <plugins>

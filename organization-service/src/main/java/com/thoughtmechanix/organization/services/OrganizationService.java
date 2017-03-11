@@ -34,11 +34,9 @@ public class OrganizationService {
             return orgRepository.findById(organizationId);
         }
         finally{
-            newSpan.tag("peer.service", "getOrgDBCall");
-            //newSpan.tag("peer.ipv4", "1.2.3.4");
-            //newSpan.tag("peer.port", "1234");
-            newSpan.logEvent(org.springframework.cloud.sleuth.Span.CLIENT_RECV);
-            tracer.close(newSpan);
+          newSpan.tag("peer.service", "postgres");
+          newSpan.logEvent(org.springframework.cloud.sleuth.Span.CLIENT_RECV);
+          tracer.close(newSpan);
         }
     }
 

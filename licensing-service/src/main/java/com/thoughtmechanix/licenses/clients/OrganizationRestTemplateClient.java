@@ -28,7 +28,7 @@ public class OrganizationRestTemplateClient {
     private static final Logger logger = LoggerFactory.getLogger(OrganizationRestTemplateClient.class);
 
     private Organization checkRedisCache(String organizationId) {
-        Span newSpan = tracer.createSpan("redis");
+       Span newSpan = tracer.createSpan("readLicensingDataFromRedis");
         try {
             return orgRedisRepo.findOrganization(organizationId);
         }
@@ -37,11 +37,9 @@ public class OrganizationRestTemplateClient {
             return null;
         }
         finally {
-            newSpan.tag("peer.service", "redis");
-            //newSpan.tag("peer.ipv4", "1.2.3.4");
-            //newSpan.tag("peer.port", "1234");
-            newSpan.logEvent(org.springframework.cloud.sleuth.Span.CLIENT_RECV);
-            tracer.close(newSpan);
+          newSpan.tag("peer.service", "redis");
+          newSpan.logEvent(org.springframework.cloud.sleuth.Span.CLIENT_RECV);
+          tracer.close(newSpan);
         }
     }
 

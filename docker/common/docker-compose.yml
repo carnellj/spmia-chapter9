@@ -12,6 +12,12 @@ services:
        EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
        EUREKASERVER_PORT: "8761"
        ENCRYPT_KEY:       "IMSYMMETRIC"
+  zipkin:
+    image: johncarnell/tmx-zipkinsvr:chapter9
+    ports:
+      - "9411:9411"
+    environment:
+      SERVER_PORT: "9411"
   zuulserver:
     image: johncarnell/tmx-zuulsvr:chapter9
     ports:
@@ -26,7 +32,7 @@ services:
       EUREKASERVER_PORT:   "8761"
       CONFIGSERVER_PORT:   "8888"
       ZIPKIN_PORT:         "9411"
-  database:
+#  database:
     image: postgres
     ports:
       - "5432:5432"
@@ -82,6 +88,7 @@ services:
     ports:
       - 2181:2181
       - 9092:9092
+  This is the openzipkin server.
   zipkin:
     image: openzipkin/zipkin
     ports:
