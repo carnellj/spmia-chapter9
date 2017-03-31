@@ -32,8 +32,8 @@ services:
       EUREKASERVER_PORT:   "8761"
       CONFIGSERVER_PORT:   "8888"
       ZIPKIN_PORT:         "9411"
-#  database:
-    image: postgres
+  database:
+    image: postgres:9.5
     ports:
       - "5432:5432"
     environment:
@@ -88,11 +88,11 @@ services:
     ports:
       - 2181:2181
       - 9092:9092
-  This is the openzipkin server.
-  zipkin:
-    image: openzipkin/zipkin
-    ports:
-      - 9411:9411
+#  This is the openzipkin server.
+  # zipkin:
+  #   image: openzipkin/zipkin
+  #   ports:
+  #     - 9411:9411
   logspout:
     image: gliderlabs/logspout
     command: syslog://logs5.papertrailapp.com:51601
