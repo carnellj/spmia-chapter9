@@ -93,6 +93,7 @@ services:
   #   image: openzipkin/zipkin
   #   ports:
   #     - 9411:9411
+  #Attention:  Replace the value in the “command” attribute with the value supplied to you from Papertrail
   logspout:
     image: gliderlabs/logspout
     command: syslog://logs5.papertrailapp.com:51601
