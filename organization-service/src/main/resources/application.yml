@@ -1,9 +1,4 @@
 spring:
-  application:
-    name: organizationservice
-  profiles:
-    active:
-      default
   #spring:
 #      sleuth:
 #        sampler:
@@ -11,8 +6,6 @@ spring:
   zipkin:
     baseUrl:  localhost:9411
   cloud:
-    config:
-      enabled: true
     stream:
       bindings:
         output:

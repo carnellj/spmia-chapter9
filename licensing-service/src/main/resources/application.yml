@@ -1,17 +1,10 @@
 spring:
-  application:
-    name: licensingservice
-  profiles:
-    active:
-      default
 #    sleuth:
 #      sampler:
 #         percentage:  1
   zipkin:
     baseUrl:  localhost:9411
   cloud:
-    config:
-      enabled: true
     stream:
       bindings:
         inboundOrgChanges:
