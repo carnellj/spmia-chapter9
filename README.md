@@ -1,5 +1,5 @@
 # Introduction
-Welcome to Spring Microservices in Action, Chapter 9. Chapter 9 demonstrates how to use Spring Cloud Sleuth. Spring Cloud Sleuth introduces tracing information into your service calls. The tracing information can be used in conjuction with a log aggregation tool (Papertrail) to query log messages by one piece of their tracing information (the correlation id).  Also, we will be exploring how to do distributed tracing using Spring Cloud Sleuth and Zipkin.     
+ Welcome to Spring Microservices in Action, Chapter 9. Chapter 9 demonstrates how to use Spring Cloud Sleuth. Spring Cloud Sleuth introduces tracing information into your service calls. The tracing information can be used in conjuction with a log aggregation tool (Papertrail) to query log messages by one piece of their tracing information (the correlation id).  Also, we will be exploring how to do distributed tracing using Spring Cloud Sleuth and Zipkin.     
 
 By the time you are done reading this chapter you will have built and/or deployed:
 
